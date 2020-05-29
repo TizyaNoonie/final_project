@@ -2,8 +2,8 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators(object):
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    LOGIN_LINK = By.CSS_SELECTOR, "#login_link"
+    LOGIN_LINK_INVALID = By.CSS_SELECTOR, "#login_link_inc"
     BASKET_LINK = By.CSS_SELECTOR, ".btn.btn-default[href*='/basket/']:first-child"
     USER_ICON = By.CSS_SELECTOR, ".icon-user"
 
@@ -11,9 +11,11 @@ class BasePageLocators(object):
 class BasketPageLocators(object):
     BASKET_ITEMS = By.CSS_SELECTOR, ".basket-items"
     EMPTY_BASKET_TEXT = By.CSS_SELECTOR, "#content_inner > p"
+    LINK = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
 
 
 class LoginPageLocators(object):
+    LINK = "http://selenium1py.pythonanywhere.com/accounts/login/"
     LOGIN_FORM = By.CSS_SELECTOR, "#login_form"
     REGISTER_FORM = By.CSS_SELECTOR, "#register_form"
 
@@ -28,6 +30,7 @@ class LoginPageLocators(object):
 
 
 class MainPageLocators(object):
+    LINK = "http://selenium1py.pythonanywhere.com/"
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
